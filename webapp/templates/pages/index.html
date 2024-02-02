@@ -1,0 +1,31 @@
+{% load static %}
+
+<html lang="en">
+<head>
+     <title>SCHEDULE</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="icon" href="/favicon.ico"  type="image/x-icon" href="{% static 'images/Logo.png' %}">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/home.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/navbar.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/footer.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/registration_form.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/login.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/appointment_form.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/view_appointments.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/view_customerDetails.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/customer_details.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/update_appointment.css' %} ">
+     <link rel="stylesheet"  type="text/css" href="{% static '/css/confirmation_logout.css' %} ">
+</head>
+<body>
+
+{% include 'pages/navbar.html' %}
+
+{% block content %}
+
+{% endblock  %}
+
+{% include 'pages/footer.html'%}
+<script src="{% static 'webapp/js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+  <div class="appointment-form-container">
+    <h2>Appointment Form</h2>
+    <form method="post" class="appointment-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit Appointment</button>
+    </form>
+  </div>
+{% endblock %}
+

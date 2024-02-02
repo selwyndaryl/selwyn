@@ -1,0 +1,36 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="left-section">
+      <h2>Welcome to our Appointment System</h2>
+
+      {% if appointments %}
+        <section class="upcoming-appointments">
+          <h3>Upcoming Appointments:</h3>
+          <ul>
+            {% for appointment in appointments %}
+              <li>
+                <span class="username">{{ appointment.user.username }}</span> -
+                <span class="date">{{ appointment.appointment_date }}</span> at
+                <span class="time">{{ appointment.appointment_time }}</span>
+                <span class="status {{ appointment.status|lower }}">{{ appointment.status }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% else %}
+        <p class="no-appointments">No upcoming appointments. Schedule one now!</p>
+      {% endif %}
+    </div>
+
+    <div class="right-section">
+      <h2>Available Services</h2>
+      <ul class="service-list">
+        {% for service_type in service_types %}
+          <li>{{ service_type.name }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

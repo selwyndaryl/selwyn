@@ -1,0 +1,83 @@
+.container {
+    max-width: 1000px; 
+    margin: 100px auto; 
+    padding: 20px;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.left-section, .right-section {
+    width: 48%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.left-section h2, .right-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.upcoming-appointments h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.upcoming-appointments ul {
+    list-style: none;
+    padding: 0;
+}
+
+.upcoming-appointments li {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.upcoming-appointments .username {
+    font-weight: bold;
+}
+
+.upcoming-appointments .date,
+.upcoming-appointments .time {
+    margin-left: 10px;
+}
+
+.upcoming-appointments .status {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.upcoming-appointments .status.Confirmed {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.upcoming-appointments .status.Pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.upcoming-appointments .status.Cancelled {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.no-appointments {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+.right-section {
+    padding-left: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+}
+
+.service-list li {
+    margin-bottom: 5px;
+}

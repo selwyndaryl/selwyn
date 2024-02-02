@@ -1,0 +1,14 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+  <div class="customer-details-form-container">
+    <h2>Customer Details</h2>
+    <form method="post" action="{% url 'customer_details_form' %}" class="customer-details-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit Details</button>
+    </form>
+  </div>
+
+
+{% endblock %}

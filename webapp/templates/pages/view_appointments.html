@@ -1,0 +1,24 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+  <div class="my-appointments-container">
+    <h2>My Appointments</h2>
+    <ul>
+        {% for appointment in user_appointments %}
+            <li>APPOINTMENT: {{   appointment.appointment_type }}</li>
+            <li>WHEN:{{    appointment.appointment_date }}</li>
+            <li>TIME:{{    appointment.appointment_time }}</li> 
+            <li>STATUS:{{    appointment.status}}</li>
+                <a href="{% url 'update_appointment' appointment.id %}" class="button-link">Update</a>
+                <form method="post" action="{% url 'cancel_appointment' appointment.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Cancel</button>
+                </form>
+            </li>
+            <hr>
+        {% endfor %}
+        <a href="{% url 'appointment_form' %}" class="button-link">Make an Appointment</a>
+    </ul>
+  </div>
+{% endblock %}
+<li></li>

@@ -1,0 +1,15 @@
+{% extends 'pages/index.html' %}
+
+{% block content %}
+  <div class="my-details-container">
+    <h2>My Details</h2>
+    {% for customer_detail in user_CustomerDetails %}
+        <p>Name: {{ customer_detail.first_name }} {{ customer_detail.last_name }}</p>
+        <p>Address: {{ customer_detail.address }}</p>
+        <p>Phone Number: {{ customer_detail.phone_number }}</p>
+        <p>Email: {{ customer_detail.email }}</p>
+    {% endfor %}
+  </div>
+{% endblock %}
+
+  
